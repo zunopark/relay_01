@@ -48,16 +48,12 @@ document.getElementById("imageForm").addEventListener('submit', async (e) => {
       return;
     }
 
+    document.getElementById("loading").style = "display:block";
+
     console.log("emotion", emotion)
     const musicList = await getMusicListByEmotion(emotion);
 
     console.log("music list", musicList)
-
-
-
-    // alert(`사진 분석이 완료되었습니다. 스크롤을 내려서 음악을 감상하세요~`);
-
-
 
     removeMusic();
 
