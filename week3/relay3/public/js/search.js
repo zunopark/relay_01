@@ -43,12 +43,15 @@ document.getElementById("imageForm").addEventListener('submit', async (e) => {
   if (selectedImage) {
     const emotion = await getEmotionByImage(selectedImage);
 
+    document.getElementById("loading").style = "display:block";
+
     if (emotion === "none") {
+      document.getElementById("loading").style = "display:none";
       alert("감정 분석에 실패했습니다. 사람이 있는 사진인지 확인해주세요!");
       return;
     }
 
-    document.getElementById("loading").style = "display:block";
+
 
     console.log("emotion", emotion)
     const musicList = await getMusicListByEmotion(emotion);
@@ -60,6 +63,8 @@ document.getElementById("imageForm").addEventListener('submit', async (e) => {
     musicList.forEach(obj => {
       document.getElementById("track-list").appendChild(getMusicJsonNode(obj, emotion))
     });
+
+    document.getElementById("loading").style = "display:none";
 
     const location = document.getElementById("track-list").offsetTop;
     console.log(location)
