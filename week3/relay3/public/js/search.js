@@ -41,9 +41,9 @@ document.getElementById("imageForm").addEventListener('submit', async (e) => {
   e.preventDefault();
 
   if (selectedImage) {
-    const emotion = await getEmotionByImage(selectedImage);
-
     document.getElementById("loading").style = "display:block";
+
+    const emotion = await getEmotionByImage(selectedImage);
 
     if (emotion === "none") {
       document.getElementById("loading").style = "display:none";
