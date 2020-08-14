@@ -1,0 +1,109 @@
+@charset 'utf-8';
+
+body, header, h1, h2, h3, h4, h5, h6, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    cursor: pointer;
+}
+
+.wraper {
+    background: url(./images/cover.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.page-header {
+    min-width: 1024px;
+    padding: 20px 0;
+    background-color: #07689f;
+}
+
+.page-title {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.page-logo {
+    font-family: 'Pacifico', cursive;
+    color: #fafafa;
+    font-size: 36px;
+}
+
+.main-container {
+    width: 1000px;
+    padding: 0 12px;
+    margin: 40px auto;
+    border-radius: 40px;
+    background-color: #fafafa;
+    background-color: rgba( 255, 255, 255, 0.5 );
+}
+
+.main-container::after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.card-wraper {
+    float: left;
+    width: 50%;
+}
+
+.main-card {
+    position: relative;
+    height: 500px;
+}
+
+.main-card-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 100px;
+    margin: -50px 0 0 -150px;
+    border-radius: 50px;
+    background-color: #ff7e67;
+    color: #f9f7f7;
+    line-height: 100px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.page-footer {
+    background-color: #fafafa;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.mood-input-group {
+    position: relative;
+}
+
+.input-mood {
+    box-sizing: border-box;
+    display: block;
+    height: 30px;
+    width: 100%;
+}
+
+.mood-button {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 150px;
+    height: 100px;
+}
+  
