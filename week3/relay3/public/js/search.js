@@ -53,18 +53,14 @@ document.getElementById("imageForm").addEventListener('submit', async (e) => {
 
     console.log("music list", musicList)
 
-    /* TODO
-    ############################################
-    여기서 노래 리스트 나열
-    ############################################
-    */
+    alert(`사진 분석이 완료되었습니다. 스크롤을 내려서 음악을 감상하세요~`);
+
     removeMusic();
 
     musicList.forEach(obj => {
       document.getElementById("track-list").appendChild(getMusicJsonNode(obj, emotion))
     });
 
-    alert("사진 분석이 완료되었습니다. 스크롤을 내려서 음악을 감상하세요~");
 
   } else {
     alert("이미지를 선택해주세요.");
