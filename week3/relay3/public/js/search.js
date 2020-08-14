@@ -54,6 +54,7 @@ document.getElementById("imageForm").addEventListener('submit', async (e) => {
     console.log("music list", musicList)
 
     const location = document.getElementById("track-list").offsetTop;
+    console.log(location)
     window.scrollTo({ top: location, behavior: 'smooth' });
 
     // alert(`사진 분석이 완료되었습니다. 스크롤을 내려서 음악을 감상하세요~`);
