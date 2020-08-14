@@ -53,9 +53,7 @@ document.getElementById("imageForm").addEventListener('submit', async (e) => {
 
     console.log("music list", musicList)
 
-    const location = document.getElementById("track-list").offsetTop;
-    console.log(location)
-    window.scrollTo({ top: location + 500, behavior: 'smooth' });
+
 
     // alert(`사진 분석이 완료되었습니다. 스크롤을 내려서 음악을 감상하세요~`);
 
@@ -66,6 +64,11 @@ document.getElementById("imageForm").addEventListener('submit', async (e) => {
     musicList.forEach(obj => {
       document.getElementById("track-list").appendChild(getMusicJsonNode(obj, emotion))
     });
+
+    const location = document.getElementById("track-list").offsetTop;
+    console.log(location)
+    window.scrollTo({ top: location, behavior: 'smooth' });
+
 
 
   } else {
