@@ -16,6 +16,13 @@ captureButton.addEventListener('click', async () => {
 
 });
 
+document.getElementById("download_btn").addEventListener('click', (e) => {
+  if (!captureImage) {
+    e.preventDefault();
+    alert("이미지 캡처 후 저장 가능합니다!")
+  }
+})
+
 /* 브라우저에 웹캠 출력 */
 const startVideo = async () => {
   try {
