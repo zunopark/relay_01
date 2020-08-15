@@ -8,7 +8,7 @@ function init() {
   let api = new API();
   let api2 = new ShutterstockAPI();
 
-  button.addEventListener("click", async (e) => {
+  const handleClick = async () => {
     inputValue = input.value;
     const ret = await api.getAdam(inputValue);
     const json = await ret.json();
@@ -31,7 +31,14 @@ function init() {
           .appendChild(getMusicJsonNode(obj, mood))
 
       });
-  });
+  }
+
+  button.addEventListener("click", handleClick);
+  document.getElementById("input-mood").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      handleClick()
+    }
+  })
 }
 
 const removeMusic = () => {

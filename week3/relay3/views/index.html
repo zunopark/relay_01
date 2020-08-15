@@ -19,22 +19,24 @@
 <body>
 
   <header class="page-header">
-    <h1 class="page-title" style="width:200px; margin:0;">
+    <h1 class="page-title">
       <a href="/" class="page-logo">SoRi-olryeo</a>
     </h1>
-    <div class="nav2">
+    <div class="mood-input-group">
       <input id="input-mood" placeholder="감정을 입력하세요" />
       <button id="search-mood">찾기</button>
     </div>
   </header>
 
-  <nav>
+  <!-- <nav>
     <a href="/search/cam" style="margin-top:3rem; display: block;">이미지로 검색
-    </a></nav>
+    </a>
+  </nav> -->
 
   <div id="main">
     <div id="track-list"></div>
   </div>
+
 
   <script src="/js/util/moodParser.js"></script>
   <script src="/js/DB/fakeDB/musicJson.js"></script>
